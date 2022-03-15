@@ -120,7 +120,7 @@ table {
   color: #fff;
   background: linear-gradient(
     90deg,
-    rgba(255, 118, 20, 1) 0%,
+    rgb(255, 20, 196) 0%,
     rgba(255, 84, 17, 1) 100%
   );
 
@@ -131,8 +131,9 @@ table {
 
 .todo-row > div:nth-child(1) {
   /* border: 1px solid red; */
+  text-align: left;
   cursor: pointer;
-  width: 250px;
+  width: 220px;
 }
 
 .todo-row:nth-child(4n + 1) {
@@ -164,6 +165,11 @@ table {
   align-items: center;
   font-size: 24px;
   cursor: pointer;
+}
+
+.btn {
+  font-size: 12px;
+  margin-left: 5px;
 }
 
 .delete-icon {

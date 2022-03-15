@@ -6,7 +6,7 @@ function TodoList() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
-    // console.log("todo:", todo);
+    console.log("todo:", todos);
     if (!todo.text) {
       return;
     }
@@ -34,6 +34,13 @@ function TodoList() {
     setTodos(removeArr);
   };
 
+  const clearTodo = () => {
+    // alert("hai");
+    const removeArr = [...todos].filter((todo) => todo.isComplete === false);
+
+    setTodos(removeArr);
+  };
+
   const completeTodo = (id) => {
     let updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
@@ -47,8 +54,8 @@ function TodoList() {
 
   return (
     <div>
-      <h1>What's the plan for today?</h1>
-      <TodoForm onSubmit={addTodo} />
+      <h1>Add your task here..!</h1>
+      <TodoForm onSubmit={addTodo} clear={clearTodo} />
       <Todo
         todos={todos}
         completeTodo={completeTodo}

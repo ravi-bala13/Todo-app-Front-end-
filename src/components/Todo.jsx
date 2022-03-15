@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import TodoForm from "./TodoForm";
-import { RiCloseCircleLine } from "react-icons/ri";
-import { TiEdit } from "react-icons/ti";
+
 import { nanoid } from "nanoid";
 
 function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
@@ -9,7 +8,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
     id: null,
     value: "",
     date: "",
-    // isComplete: false
+    isComplete: false,
   });
 
   const submitUpdate = (value) => {
@@ -18,7 +17,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
       id: null,
       value: "",
       date: "",
-      // isComplete: false
+      isComplete: false,
     });
   };
 
@@ -37,16 +36,18 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
       <div>{todo.date}</div>
 
       <div className="icons">
-        <RiCloseCircleLine
-          onClick={() => removeTodo(todo.id)}
-          className="delete-icon"
-        />
-        <TiEdit
+        <button className="btn" onClick={() => removeTodo(todo.id)}>
+          Remove
+        </button>
+
+        <button
+          className="btn"
           onClick={() =>
             setEdit({ id: todo.id, value: todo.text, date: todo.date })
           }
-          className="edit-icon"
-        />
+        >
+          Edit
+        </button>
       </div>
     </div>
   ));

@@ -14,6 +14,8 @@ function TodoForm(props) {
 
   const [startDate, setStartDate] = useState(new Date());
   const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  //   console.log("time:", time);
   //   const [value, onChange] = useState("10:00");
 
   const inputRef = useRef(null);
@@ -38,17 +40,19 @@ function TodoForm(props) {
       id: nanoid(4),
       text: input,
       date: date,
+      isComplete: false,
     });
 
     setInput("");
   };
 
   const handleDate = (date) => {
+    console.log("date:", date);
     setStartDate(date);
     let tem = String(date).split(" ");
 
     let str = tem[0] + " " + tem[1] + " " + tem[2] + " " + tem[3];
-
+    setTime(tem[4]);
     setDate(str);
   };
 
@@ -90,32 +94,11 @@ function TodoForm(props) {
                   />
                 </td>
               </tr>
-              {/* <tr>
-                <td>
-                  <label className="labels">Date</label>
-                </td>
-                <td>
-                  <TimePicker />
-                </td>
-              </tr> */}
             </table>
 
             <button className="todo-button">Update</button>
           </>
         ) : (
-          //   <>
-          //     <input
-          //       type="text"
-          //       placeholder="Update todo"
-          //       value={input}
-          //       name="text"
-          //       className="todo-input edit"
-          //       onChange={handleChange}
-          //       ref={inputRef}
-          //     />
-
-          //     <button className="todo-button">update</button>
-          //   </>
           <>
             <table>
               <tr>
@@ -152,20 +135,15 @@ function TodoForm(props) {
                   />
                 </td>
               </tr>
-              {/* <tr>
-                <td>
-                  <label className="labels">Date</label>
-                </td>
-                <td>
-                  <TimePicker />
-                </td>
-              </tr> */}
             </table>
 
             <button className="todo-button">Add</button>
           </>
         )}
       </form>
+      <button onClick={props.clear} className="todo-button">
+        clear
+      </button>
     </div>
   );
 }
