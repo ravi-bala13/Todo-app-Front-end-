@@ -6,7 +6,7 @@ function TodoList() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
-    console.log("todo:", todo);
+    // console.log("todo:", todo);
     if (!todo.text) {
       return;
     }
@@ -14,11 +14,11 @@ function TodoList() {
     const newTodos = [...todos, todo];
 
     setTodos(newTodos);
-    console.log("...todos:", ...todos);
+    // console.log("...todos:", ...todos);
   };
 
   const updateTodo = (todoId, newValue) => {
-    console.log("newValue:", newValue);
+    // console.log("newValue:", newValue);
     if (!newValue) {
       return;
     }

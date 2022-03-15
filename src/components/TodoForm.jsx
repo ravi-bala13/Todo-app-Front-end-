@@ -14,7 +14,7 @@ function TodoForm(props) {
 
   const [startDate, setStartDate] = useState(new Date());
   const [date, setDate] = useState("");
-  const [value, onChange] = useState("10:00");
+  //   const [value, onChange] = useState("10:00");
 
   const inputRef = useRef(null);
 
@@ -29,6 +29,11 @@ function TodoForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (date == "") {
+      alert("Please enter date");
+      return;
+    }
+
     props.onSubmit({
       id: nanoid(4),
       text: input,
@@ -39,12 +44,10 @@ function TodoForm(props) {
   };
 
   const handleDate = (date) => {
-    // console.log("date:", date);
     setStartDate(date);
     let tem = String(date).split(" ");
-    // console.log("tem:", tem);
+
     let str = tem[0] + " " + tem[1] + " " + tem[2] + " " + tem[3];
-    // console.log("str:", str);
 
     setDate(str);
   };
@@ -130,6 +133,7 @@ function TodoForm(props) {
                     className="todo-input"
                     onChange={handleChange}
                     ref={inputRef}
+                    required
                   />
                 </td>
               </tr>
@@ -144,6 +148,7 @@ function TodoForm(props) {
                     name="date"
                     showTimeSelect
                     onChange={(date) => handleDate(date)}
+                    required
                   />
                 </td>
               </tr>
