@@ -60,5 +60,5 @@ Open a Pull Request
 Gmail : bals161616@gmail.com
 
 Project Link: https://github.com/ravi-bala13/Todo-app-Front-end-
-Deployement link: https://todo-app-front-end.vercel.app/
+Deployment link: https://todo-app-front-end.vercel.app/
 
