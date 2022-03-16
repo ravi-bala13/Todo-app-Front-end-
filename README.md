@@ -40,7 +40,7 @@ I Create a Todo app using React, HTML, CSS which is assignment given in narayaa 
 </ul>
 
 <h1>Clone the repo</h1>
-git clone https://github.com/ravi-bala13/Song-Studio-F-E-.git
+git clone https://github.com/ravi-bala13/Todo-app-Front-end-
 
 <h1>Install NPM packages</h1>
 npm install
