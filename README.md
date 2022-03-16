@@ -4,20 +4,23 @@
 
 # Todo-app-Front-end-
 
-I Create a Todo app using React, HTML, CSS which is assignment given in narayaa groups
+I Create a Todo app using React, HTML, CSS which is assignment given in Narayna groups
 
 
 <h1>About The Project</h1>
 
--we can add todo task with date and time and remove the task from the list
--we can update or edit the task details
--we can toggle task completed and not completed
--we can remove all completed task in a single click
+<ul>
+ <li>we can add todo task with date and time and remove the task from the list</li>
+ <li>we can update or edit the task details</li>
+ <li>we can toggle the status of task between completed and not completed</li>
+ <li>we can remove all completed task in a single click</li>
+</ul>
 
-#Product Name Screen Shot
+# Screen Shot of the page
 
-<h1>Built With</h1>
-  
+![alt text](https://i.ibb.co/pj7dRXK/Screenshot-234.png)
+
+<h1>Built With</h1> 
 
 <ul>
   <li>React.js</li>
@@ -27,14 +30,13 @@ I Create a Todo app using React, HTML, CSS which is assignment given in narayaa 
 
 <h1>Getting Started</h1>
 
-
 <ul>
   <li>step1: Open terminal and run comment npm init</li>
-  <li>step2: npm run dev</li>
-  
+  <li>step2: npm run dev</li>  
 </ul>
 
 <h1>Prerequisites</h1>
+
 <ul>
   <li>Need to use vscode or other code editor to run application</li>
 </ul>
